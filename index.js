@@ -1,7 +1,8 @@
 const ansi = require('ansi-escapes')
 const chalk = require('chalk')
 
-module.exports = exports.default = function emailPropt({
+// eslint-disable-next-line no-multi-assign
+module.exports = exports.default = function emailPrompt({
   start = '> Enter your email: ',
   domains = new Set([
     'aol.com',
@@ -119,7 +120,7 @@ module.exports = exports.default = function emailPropt({
           }
         }
 
-        if (completion.length > 0) {
+        if (completion.length < 0) {
           suggestion = ''
         }
       }
